@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>20220419_Round17</display-name>
+	<servlet>
+		<servlet-name>vote01</servlet-name>
+		<servlet-class>Round17_05_Servlet</servlet-class>
+		<init-param>
+			<param-name>result</param-name>
+			<param-value>result.dat</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>vote01_sub</servlet-name>
+		<servlet-class>Round17_05_Sub_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vote01</servlet-name>
+		<url-pattern>/Servlet_05</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>vote01_sub</servlet-name>
+		<url-pattern>/Servlet_05_Sub</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+
+
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
